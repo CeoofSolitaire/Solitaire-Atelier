@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOLITAIRE ATELIER | Beyond Ordinary</title>
+<meta name="description" content="SOLITAIRE ATELIER — An independent luxury fashion and design house. Discover original designs and exclusive collections.">style>
+:root {
+  --black:#090909;
+  --gold:#c5a15a;
+  --cream:#f1eadb;
+  --muted:#aaa49a;
+}
+
+* {box-sizing:border-box;margin:0;padding:0}
+
+html {scroll-behavior:smooth}
+
+body {
+  background:var(--black);
+  color:var(--cream);
+  font-family:Georgia,'Times New Roman',serif;
+}
+
+a {color:inherit;text-decoration:none}
+
+button {font:inherit;cursor:pointer}
+
+header {
+  height:85px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:0 7%;
+  border-bottom:1px solid #29251e;
+  position:sticky;
+  top:0;
+  background:#090909f5;
+  z-index:10;
+}
+
+.logo {
+  color:var(--gold);
+  font-size:21px;
+  letter-spacing:5px;
+  font-weight:bold;
+}
+
+.logo span {
+  display:block;
+  font-size:9px;
+  letter-spacing:6px;
+  text-align:center;
+  margin-top:5px;
+}
+
+nav {
+  display:flex;
+  align-items:center;
+  gap:30px;
+  font-family:Arial,sans-serif;
+  font-size:11px;
+  letter-spacing:2px;
+}
+
+nav a:hover {color:var(--gold)}
+
+.bag {
+  border:1px solid var(--gold);
+  padding:11px 16px;
+  color:var(--gold);
+  background:transparent;
+  font-size:11px;
+}
+
+.hero {
+  min-height:620px;
+  display:flex;
+  align-items:center;
+  padding:80px 10%;
+  background:
+    radial-gradient(ellipse at 75% 50%,#44341c55,transparent 45%),
+    linear-gradient(110deg,#090909 45%,#17130d);
+  position:relative;
+  overflow:hidden;
+}
+
+.hero:after {
+  content:"S";
+  position:absolute;
+  right:10%;
+  top:5%;
+  font-size:500px;
+  color:#c5a15a0b;
+  font-weight:bold;
+  pointer-events:none;
+}
+
+.hero-content {
+  position:relative;
+  z-index:1;
+  max-width:650px;
+}
+
+.eyebrow {
+  color:var(--gold);
+  letter-spacing:6px;
+  font:11px Arial,sans-serif;
+  margin-bottom:28px;
+}
+
+h1 {
+  font-size:clamp(48px,8vw,100px);
+  line-height:.98;
+  font-weight:normal;
+  letter-spacing:-3px;
+}
+
+h1 em {color:var(--gold)}
+
+.hero p {
+  color:var(--muted);
+  font:14px/2 Arial,sans-serif;
+  max-width:440px;
+  margin:30px 0;
+}
+
+.gold-button {
+  display:inline-block;
+  padding:17px 30px;
+  background:var(--gold);
+  color:#090909;
+  font:11px Arial,sans-serif;
+  letter-spacing:3px;
+  border:1px solid var(--gold);
+  transition:.3s;
+}
+
+.gold-button:hover {
+  background:transparent;
+  color:var(--gold);
+}
+
+.outline-button {
+  display:inline-block;
+  padding:16px 27px;
+  border:1px solid var(--gold);
+  color:var(--gold);
+  font:11px Arial,sans-serif;
+  letter-spacing:2px;
+}
+
+.section {
+  padding:100px 8%;
+}
+
+.section-heading {
+  text-align:center;
+  margin-bottom:55px;
+}
+
+.section-heading h2 {
+  font-size:43px;
+  font-weight:normal;
+  margin:15px 0;
+}
+
+.section-heading p {
+  color:var(--muted);
+  font:12px Arial,sans-serif;
+  letter-spacing:1px;
+}
+
+.products {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.product-art {
+  height:370px;
+  background:linear-gradient(145deg,#28221a,#0d0c0a);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  position:relative;
+}
+
+.art-word {
+  color:#c5a15a33;
+  font-size:130px;
+  position:absolute;
+  font-weight:bold;
+}
+
+.art-shape {
+  width:145px;
+  height:245px;
+  border:1px solid #c5a15a;
+  transform:rotate(8deg);
+  position:relative;
+  z-index:1;
+  box-shadow:15px 20px 50px #000;
+}
+
+.art-shape:before {
+  content:"S";
+  position:absolute;
+  font-size:95px;
+  color:var(--gold);
+  top:65px;
+  left:42px;
+}
+
+.art-shape.two {
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  transform:rotate(0deg);
+}
+
+.art-shape.two:before {
+  content:"SA";
+  font-size:50px;
+  top:55px;
+  left:52px;
+}
+
+.art-shape.three {
+  height:260px;
+  width:110px;
+  transform:rotate(-12deg);
+}
+
+.product-info {padding:22px 0}
+
+.product-info small {
+  color:var(--gold);
+  font:10px Arial,sans-serif;
+  letter-spacing:3px;
+}
+
+.product-info h3 {
+  font-size:23px;
+  font-weight:normal;
+  margin:12px 0;
+}
+
+.product-info p {
+  color:var(--muted);
+  font:12px/1.8 Arial,sans-serif;
+}
+
+.product-info button {
+  margin-top:20px;
+  padding:12px 18px;
+  color:var(--gold);
+  border:1px solid #80663b;
+  background:transparent;
+  font:10px Arial,sans-serif;
+  letter-spacing:2px;
+}
+
+.product-info button:hover {
+  background:var(--gold);
+  color:#000;
+}
+
+.dark-section {
+  background:#11100e;
+}
+
+.digital {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+}
+
+.digital-art {
+  min-height:400px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:
+    radial-gradient(circle,#48371e,#17130e 65%);
+  border:1px solid #66502d;
+}
+
+.digital-art div {
+  border:1px solid var(--gold);
+  padding:65px 35px;
+  text-align:center;
+  color:var(--gold);
+  letter-spacing:7px;
+  font-size:30px;
+}
+
+.digital h2 {
+  font-size:48px;
+  font-weight:normal;
+  line-height:1.2;
+  margin:20px 0;
+}
+
+.digital p {
+  font:13px/2 Arial,sans-serif;
+  color:var(--muted);
+  margin-bottom:28px;
+}
+
+.about {
+  text-align:center;
+  max-width:750px;
+  margin:auto;
+}
+
+.about h2 {
+  font-size:45px;
+  font-weight:normal;
+  margin:20px 0;
+}
+
+.about p {
+  color:var(--muted);
+  font:14px/2 Arial,sans-serif;
+}
+
+footer {
+  border-top:1px solid #332b1e;
+  padding:50px 8%;
+  text-align:center;
+}
+
+footer .logo {margin-bottom:25px}
+
+footer p {
+  color:var(--muted);
+  font:11px Arial,sans-serif;
+  line-height:2.5;
+}
+
+footer a {color:var(--gold)}
+
+.toast {
+  position:fixed;
+  bottom:25px;
+  left:50%;
+  transform:translateX(-50%);
+  background:var(--gold);
+  color:#000;
+  padding:15px 25px;
+  font:12px Arial,sans-serif;
+  display:none;
+  z-index:20;
+}
+
+@media(max-width:750px) {
+  header {padding:0 5%;height:75px}
+  .logo {font-size:16px;letter-spacing:3px}
+  nav {gap:12px;font-size:9px}
+  nav a:nth-child(2) {display:none}
+  .bag {padding:9px}
+  .hero {min-height:570px;padding:70px 7%}
+  .hero:after {font-size:300px;right:-5%}
+  .products {grid-template-columns:1fr}
+  .product-art {height:330px}
+  .section {padding:75px 7%}
+  .digital {grid-template-columns:1fr;gap:35px}
+  .digital-art {min-height:300px}
+  .digital h2,.about h2 {font-size:36px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <a href="#" class="logo">
+    SOLITAIRE
+    <span>ATELIER</span>
+  </a>
+
+  <nav>
+    <a href="#collections">COLLECTIONS</a>
+    <a href="#digital">DIGITAL</a>
+    <a href="#about">ABOUT</a>
+  </nav>
+
+  <button class="bag" onclick="showMessage('Your shopping experience is coming soon.')">
+    BAG (<span id="count">0</span>)
+  </button>
+</header>
+
+<main>
+
+<section class="hero">
+  <div class="hero-content">
+    <div class="eyebrow">INDEPENDENT LUXURY DESIGN HOUSE</div>
+
+    <h1>BEYOND<br><em>ORDINARY.</em></h1>
+
+    <p>
+      An expression of individuality, confidence and timeless design.
+      Discover a different perspective on luxury with SOLITAIRE ATELIER.
+    </p>
+
+    <a href="#collections" class="gold-button">
+      DISCOVER THE COLLECTION
+    </a>
+  </div>
+</section>
+
+<section class="section" id="collections">
+
+  <div class="section-heading">
+    <div class="eyebrow">THE ATELIER EDITION</div>
+    <h2>Original Creations</h2>
+    <p>DESIGNED WITH INTENTION. CREATED TO STAND APART.</p>
+  </div>
+
+  <div class="products">
+
+    <article>
+      <div class="product-art">
+        <div class="art-word">01</div>
+        <div class="art-shape"></div>
+      </div>
+      <div class="product-info">
+        <small>COLLECTION 001</small>
+        <h3>The Solitaire Form</h3>
+        <p>A study of structure, elegance and contemporary identity.</p>
+        <button onclick="showMessage('The Solitaire Form — coming soon.')">
+          EXPLORE DESIGN
+        </button>
+      </div>
+    </article>
+
+    <article>
+      <div class="product-art" style="background:linear-gradient(140deg,#382c1b,#100e0b)">
+        <div class="art-word">02</div>
+        <div class="art-shape two"></div>
+      </div>
+      <div class="product-info">
+        <small>COLLECTION 002</small>
+        <h3>The Gold Standard</h3>
+        <p>Minimalist design inspired by understated sophistication.</p>
+        <button onclick="showMessage('The Gold Standard — coming soon.')">
+          EXPLORE DESIGN
+        </button>
+      </div>
+    </article>
+
+    <article>
+      <div class="product-art" style="background:linear-gradient(145deg,#292929,#090909)">
+        <div class="art-word">03</div>
+        <div class="art-shape three"></div>
+      </div>
+      <div class="product-info">
+        <small>COLLECTION 003</small>
+        <h3>Midnight Signature</h3>
+        <p>A bold visual identity with a distinctly modern character.</p>
+        <button onclick="showMessage('Midnight Signature — coming soon.')">
+          EXPLORE DESIGN
+        </button>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<section class="section dark-section" id="digital">
+
+  <div class="digital">
+
+    <div class="digital-art">
+      <div>
+        SOLITAIRE
+        <p style="font-size:10px;margin-top:18px">DIGITAL ATELIER</p>
+      </div>
+    </div>
+
+    <div>
+      <div class="eyebrow">THE DIGITAL COLLECTION</div>
+      <h2>Design without boundaries.</h2>
+      <p>
+        Explore original digital creations, exclusive design concepts
+        and downloadable pieces from the SOLITAIRE universe.
+        A new dimension of creative expression.
+      </p>
+      <a href="#contact" class="outline-button">
+        DISCOVER DIGITAL
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="about">
+    <div class="eyebrow">OUR PHILOSOPHY</div>
+    <h2>Not made to follow.</h2>
+    <p>
+      SOLITAIRE ATELIER is an independent luxury fashion and design
+      house built around originality, creative freedom and timeless
+      expression. Every creation begins with an idea. Every detail
+      has a purpose. We believe individuality is the ultimate luxury.
+    </p>
+  </div>
+</section>
+
+<section class="section dark-section" id="contact">
+  <div class="section-heading">
+    <div class="eyebrow">ENTER THE WORLD OF SOLITAIRE</div>
+    <h2>The next chapter awaits.</h2>
+    <p>ORIGINAL DESIGN. DISTINCTIVE IDENTITY.</p>
+    <br><br>
+    <a href="mailto:hello@solitaireatelier.com" class="gold-button">
+      CONTACT THE ATELIER
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="logo">
+    SOLITAIRE
+    <span>ATELIER</span>
+  </div>
+  <p>AN INDEPENDENT DESIGN HOUSE</p>
+  <p>© 2026 SOLITAIRE ATELIER. ALL RIGHTS RESERVED.</p>
+  <p>BEYOND ORDINARY.</p>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+let bagCount = 0;
+
+function showMessage(message) {
+  const toast = document.getElementById('toast');
+  toast.textContent = message;
+  toast.style.display = 'block';
+
+  clearTimeout(window.toastTimer);
+  window.toastTimer = setTimeout(() => {
+    toast.style.display = 'none';
+  }, 3000);
+}
+</script>
+
+</body>
+</html>
