@@ -551,6 +551,94 @@ function showMessage(message) {
   }, 3000);
 }
 </script>
+style>
+.after-dark {
+  padding: 80px 6%;
+  background: #090909;
+  color: #f5f0e6;
+  text-align: center;
+}
+.after-dark .eyebrow {
+  color: #c6a45c;
+  letter-spacing: 5px;
+  font-size: 11px;
+}
+.after-dark h2 {
+  font-size: clamp(32px, 6vw, 58px);
+  letter-spacing: 3px;
+  margin: 18px 0;
+}
+.after-dark .intro {
+  color: #aaa;
+  margin-bottom: 45px;
+}
+.drop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  text-align: left;
+  max-width: 1100px;
+  margin: auto;
+}
+.drop-card {
+  border: 1px solid #393329;
+  padding: 12px;
+}
+.drop-art {
+  min-height: 230px;
+  background: #171512;
+  display: grid;
+  place-items: center;
+  color: #c6a45c;
+  font-size: 38px;
+}
+.drop-card h3 {
+  letter-spacing: 2px;
+  margin-bottom: 8px;
+}
+.drop-card p {
+  color: #aaa;
+  font-size: 13px;
+}
+.drop-status {
+  color: #c6a45c;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+@media(max-width:700px) {
+  .drop-grid { grid-template-columns: 1fr; }
+}
+</style>
 
+<section class="after-dark" id="after-dark">
+  <p class="eyebrow">SOLITAIRE ATELIER PRESENTS</p>
+  <h2>AFTER DARK</h2>
+  <p class="intro">DROP 001 — ORIGINAL CLOTHING DESIGN PACKS</p>
+
+  <div class="drop-grid">
+
+    <article class="drop-card">
+      <div class="drop-art">I</div>
+      <h3>AFTER DARK</h3>
+      <p>Oversized hoodie design concept. Dark silhouettes. Bold identity.</p>
+      <span class="drop-status">COMING SOON</span>
+    </article>
+
+    <article class="drop-card">
+      <div class="drop-art">II</div>
+      <h3>NOCTURNE</h3>
+      <p>Premium oversized T-shirt design concept with distinctive graphics.</p>
+      <span class="drop-status">COMING SOON</span>
+    </article>
+
+    <article class="drop-card">
+      <div class="drop-art">III</div>
+      <h3>MIDNIGHT</h3>
+      <p>Relaxed cargo collection with original streetwear detailing.</p>
+      <span class="drop-status">COMING SOON</span>
+    </article>
+
+  </div>
+</section>
 </body>
 </html>
